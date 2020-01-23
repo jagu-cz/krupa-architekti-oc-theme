@@ -1,0 +1,44 @@
+tabs:
+    fields:
+        ####################################################
+        # Tab: Footer
+        ####################################################
+        footer_section:
+            tab: Patička
+            label: Patička
+            type: section
+        footer_background_color:
+            tab: Patička
+            label: Barva pozadí patičky
+            type: colorpicker
+            span: left
+        footer_text_color:
+            tab: Patička
+            label: Barva textu patičky
+            type: colorpicker
+            span: right
+        footer_cols_section:
+            tab: Patička
+            label: Obsah
+            type: section
+        footer_cols:
+            tab: Patička
+            prompt: Přidat obsah
+            titleFrom: footer_col_section
+            type: repeater
+            form:
+                fields:
+                    footer_col_size:
+                        label: Velikost
+                        type: balloon-selector
+                        span: full
+                        options:
+                            col-lg-12 col-md-12: Celá šířka
+                            col-lg-6 col-md-12: 1/2 šířky
+                            col-lg-4 col-md-12: 1/3 šířky
+                            col-lg-3 col-md-12: 1/4 šířky
+                    footer_col_text:
+                        label: Obsah
+                        type: richeditor
+                        size: small
+                        span: full

@@ -1,0 +1,23 @@
+// variables
+$footer-padding: 3em;
+
+// CSS
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: $footer-padding;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: $footer-padding 0;
+
+    p {
+        margin-bottom: 0
+    }
+}

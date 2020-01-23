@@ -1,1 +1,11 @@
-<h1>Footer</h1>
+<footer id="footer" style="background-color: {{ this.theme.footer_background_color }}">
+    <div class="container" style="color: {{ this.theme.footer_text_color }}">
+        <div class="row">
+        {% for col in this.theme.footer_cols %}
+            <div class="{{ col.footer_col_size }}">
+                {{ col.footer_col_text|raw }}
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+</footer>

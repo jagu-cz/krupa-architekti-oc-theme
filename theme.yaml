@@ -1,5 +1,9 @@
 name: 'Krůpa Architekti'
-description: 'October CMS theme for "Krůpa Architekti"'
 author: 'Jagu s.r.o.'
 homepage: www.jagu.cz
+description: 'October CMS theme for "Krůpa Architekti"'
+previewImage: assets/images/jagu.jpg
 code: krupa-architekti-jagu-oc-theme
+form: config/theme.yaml
+require:
+    - Jagu.KrupaArchitekti
