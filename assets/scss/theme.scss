@@ -1,4 +1,5 @@
 // variables
+$header-padding: 100px;
 $footer-padding: 3em;
 
 // CSS
@@ -8,16 +9,42 @@ html {
 }
 
 body {
-    margin-bottom: $footer-padding;
+    margin-bottom: (2 * $footer-padding) + 1em;
 }
 
-#footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: $footer-padding 0;
+#layout-header {
+    #header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        transition: top 0.5s;
 
-    p {
-        margin-bottom: 0
+        .navbar {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+
+            .nav-link {
+                &:hover, &.active {
+                    filter: brightness(70%);
+                }
+            }
+        }
+    }
+}
+
+#layout-content {
+    padding-top: $header-padding;
+}
+
+#layout-footer {
+    #footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: $footer-padding 0;
+
+        p {
+            margin-bottom: 0
+        }
     }
 }

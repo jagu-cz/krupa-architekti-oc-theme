@@ -1,6 +1,29 @@
 tabs:
     fields:
         ####################################################
+        # Tab: Nav
+        ####################################################
+        nav_section:
+            tab: Menu
+            label: Menu
+            type: section
+        nav_background_color:
+            tab: Menu
+            label: Barva pozadí menu
+            type: tsch_color_picker
+            allowEmpty: true
+            span: left
+        nav_text_color:
+            tab: Menu
+            label: Barva textu menu
+            type: tsch_color_picker
+            span: right
+        nav_logo:
+            tab: Menu
+            label: Logo
+            type: fileupload
+            mode: image
+        ####################################################
         # Tab: Footer
         ####################################################
         footer_section:
@@ -10,12 +33,12 @@ tabs:
         footer_background_color:
             tab: Patička
             label: Barva pozadí patičky
-            type: colorpicker
+            type: tsch_color_picker
             span: left
         footer_text_color:
             tab: Patička
             label: Barva textu patičky
-            type: colorpicker
+            type: tsch_color_picker
             span: right
         footer_cols_section:
             tab: Patička

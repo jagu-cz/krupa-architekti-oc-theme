@@ -7,3 +7,5 @@ code: krupa-architekti-jagu-oc-theme
 form: config/theme.yaml
 require:
     - Jagu.KrupaArchitekti
+    - RainLab.Pages
+    - Tschallacka.FormTools

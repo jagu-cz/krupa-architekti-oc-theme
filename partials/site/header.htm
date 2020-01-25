@@ -1,1 +1,36 @@
-<h1>Header</h1>
+[staticMenu]
+code = "main-menu"
+
+[viewBag]
+==
+<header id="header" style="background-color: {{ this.theme.nav_background_color }}">
+    <nav class="container navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">
+            {% if this.theme.nav_logo %}
+                <img src="{{ this.theme.nav_logo.getPath() }}" height="40" alt="{{ this.theme.nav_logo.title }}">
+            {% endif %}
+        </a>
+        <button class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarContent"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ml-auto">
+                {% for item in staticMenu.menuItems %}
+                    <li class="nav-item">
+                        <a href="{{ item.url }}"
+                           class="nav-link {% if item.isActive %}active{% endif %}"
+                           style="color: {{ this.theme.nav_text_color }}"
+                        >
+                            {{ item.title }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </nav>
+</header>
