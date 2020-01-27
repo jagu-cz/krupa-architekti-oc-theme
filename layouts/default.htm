@@ -1,4 +1,11 @@
 description = "Default layout"
+
+[staticMenu]
+code = "main-menu"
+
+[staticPage]
+useContent = 0
+default = 0
 ==
 <!DOCTYPE html>
 <html>
@@ -25,7 +32,15 @@ description = "Default layout"
 
 <!-- Content -->
 <section id="layout-content">
-    {% page %}
+    <!-- Repeater -->
+    {repeater name="sections" groups="~/themes/krupa-architekti/meta/blocks.yaml" tab="Blocks"}
+    {variable name="_dummy" type="text"}{/variable}
+    {/repeater}
+    <!-- Render blocks -->
+    {% for section in sections %}
+        {% partial 'blocks/' ~ section._group data=section %}
+    {% endfor %}
+
 </section>
 
 <!-- Footer -->

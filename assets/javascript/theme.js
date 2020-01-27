@@ -1,4 +1,4 @@
-/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+// When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar
 let prevScrollPos = window.pageYOffset;
 window.onscroll = () => {
     let currentScrollPos = window.pageYOffset;
@@ -9,3 +9,9 @@ window.onscroll = () => {
     }
     prevScrollPos = currentScrollPos;
 };
+
+// Full-height header image
+$(function () {
+    let height = $(window).height();
+    $(".header-image").height(height);
+});

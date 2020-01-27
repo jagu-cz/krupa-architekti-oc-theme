@@ -2,18 +2,15 @@
 $header-padding: 100px;
 $footer-padding: 3em;
 
-// CSS
+// SCSS
 html {
     position: relative;
     min-height: 100%;
 }
 
-body {
-    margin-bottom: (2 * $footer-padding) + 1em;
-}
-
 #layout-header {
     #header {
+        z-index: 1000;
         position: fixed;
         top: 0;
         width: 100%;
@@ -24,8 +21,32 @@ body {
             padding-bottom: 2rem;
 
             .nav-link {
+                position: relative;
+                padding-bottom: .3rem;
+                margin: .5rem;
+                transition: opacity 0.3s linear;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    bottom: 0;
+                    left: 0;
+                    background-color: #ffffff;
+                    visibility: hidden;
+                    -webkit-transform: scaleX(0);
+                    transform: scaleX(0);
+                    -webkit-transition: all 0.3s ease-in-out 0s;
+                    transition: all 0.3s ease-in-out 0s;
+                }
+
                 &:hover, &.active {
-                    filter: brightness(70%);
+                    &:before {
+                        visibility: visible;
+                        -webkit-transform: scaleX(1);
+                        transform: scaleX(1);
+                    }
                 }
             }
         }
@@ -33,13 +54,11 @@ body {
 }
 
 #layout-content {
-    padding-top: $header-padding;
+
 }
 
 #layout-footer {
     #footer {
-        position: absolute;
-        bottom: 0;
         width: 100%;
         padding: $footer-padding 0;
 
@@ -47,4 +66,15 @@ body {
             margin-bottom: 0
         }
     }
+}
+
+// blocks
+.header-image {
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
 }

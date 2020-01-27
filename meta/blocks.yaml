@@ -1,0 +1,9 @@
+headerimage:
+    name: Header image
+    description: Full-width and full-height header image
+    icon: icon-image
+    fields:
+        image:
+            label: Image
+            type: mediafinder
+            mode: image

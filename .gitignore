@@ -1,4 +1,7 @@
+# RainLab.Pages plugin
 meta/*
+!meta/blocks.yaml
+content/*
 
 # Created by https://www.gitignore.io/api/git,macos,windows,phpstorm
 # Edit at https://www.gitignore.io/?templates=git,macos,windows,phpstorm
