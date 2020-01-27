@@ -7,3 +7,21 @@ headerimage:
             label: Image
             type: mediafinder
             mode: image
+
+pagetitle:
+    name: Page title
+    description: Page title
+    icon: icon-header
+    fields:
+        title:
+            label: Title
+            type: text
+
+editor:
+    name: Text editor
+    description: Text editor
+    icon: icon-align-left
+    fields:
+        editor:
+            label: Editor
+            type: richeditor

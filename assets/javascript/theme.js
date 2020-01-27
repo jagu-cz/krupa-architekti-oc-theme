@@ -12,6 +12,13 @@ window.onscroll = () => {
 
 // Full-height header image
 $(function () {
+    adjustHeaderImageHeight();
+    $(window).resize(function () {
+        adjustHeaderImageHeight();
+    });
+});
+
+let adjustHeaderImageHeight = function () {
     let height = $(window).height();
     $(".header-image").height(height);
-});
+};
