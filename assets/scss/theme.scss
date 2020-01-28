@@ -64,7 +64,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 #layout-content {
     .section {
-        padding: 100px 0;
+        padding: 50px 0;
     }
 }
 
@@ -119,5 +119,15 @@ p, h1, h2, h3, h4, h5, h6 {
             width: 100%;
             padding-bottom: 80%; // 5:4 aspect ratio
         }
+    }
+}
+
+.project {
+    .project-title {
+        margin-top: 1rem;
+    }
+
+    .project-photo {
+        width: 100%;
     }
 }
