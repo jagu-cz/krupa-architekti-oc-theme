@@ -6,6 +6,8 @@ code = "main-menu"
 [staticPage]
 useContent = 0
 default = 1
+
+[gallery]
 ==
 <!DOCTYPE html>
 <html>
@@ -40,6 +42,8 @@ default = 1
     {% for section in sections %}
         {% partial 'blocks/' ~ section._group data=section %}
     {% endfor %}
+
+    {% page %}
 
 </section>
 

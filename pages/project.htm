@@ -1,0 +1,20 @@
+title = "Project"
+url = "/projekt/:slug"
+layout = "default"
+is_hidden = 0
+==
+function onStart() { $this['project'] = \Jagu\KrupaArchitekti\Models\Project::where('slug', $this->param('slug'))->first(); }
+==
+{# header image #}
+{% set headerImageData = {'image': project.cover_image} %}
+{% partial 'blocks/headerimage' data=headerImageData %}
+
+{# Project detail #}
+<div class="project">
+    <section class="section">
+        <div class="container">
+            <h1>{{ project.title }}</h1>
+            <p>{{ project.description|raw }}</p>
+        </div>
+    </section>
+</div>

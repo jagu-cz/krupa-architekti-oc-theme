@@ -8,6 +8,15 @@ html {
     min-height: 100%;
 }
 
+body {
+    font-weight: 200;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    color: #808080;
+    font-weight: 200;
+}
+
 #layout-header {
     #header {
         z-index: 1000;
@@ -54,7 +63,9 @@ html {
 }
 
 #layout-content {
-
+    .section {
+        padding: 100px 0;
+    }
 }
 
 #layout-footer {
@@ -90,6 +101,23 @@ html {
 
 .editor {
     color: #808080;
-    font-weight: 300;
     margin-bottom: 1rem;
+}
+
+.gallery {
+    .gallery-item {
+        margin: 2rem 0;
+
+        h5 {
+            margin-top: 1.5rem;
+        }
+
+        .gallery-thumbnail {
+            background-size: cover;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            width: 100%;
+            padding-bottom: 80%; // 5:4 aspect ratio
+        }
+    }
 }

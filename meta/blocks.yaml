@@ -3,6 +3,9 @@ headerimage:
     description: Full-width and full-height header image
     icon: icon-image
     fields:
+        section:
+            label: Image
+            type: section
         image:
             label: Image
             type: mediafinder
@@ -13,6 +16,9 @@ pagetitle:
     description: Page title
     icon: icon-header
     fields:
+        section:
+            label: Title
+            type: section
         title:
             label: Title
             type: text
@@ -22,6 +28,18 @@ editor:
     description: Text editor
     icon: icon-align-left
     fields:
+        section:
+            label: Editor
+            type: section
         editor:
             label: Editor
             type: richeditor
+
+gallery:
+    name: Gallery
+    description: Gallery
+    icon: icon-th
+    fields:
+        section:
+            label: Gallery
+            type: section
