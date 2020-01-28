@@ -33,7 +33,6 @@ function onStart() { $this['project'] = \Jagu\KrupaArchitekti\Models\Project::wh
                                    data-lightbox="lightbox"
                                    data-title="{{ project.title }}"
                                 >
-                                    {{ debug(column.content_image) }}
                                     <img class="project-photo {{ column.vertical_align }}"
                                          src="{{ column.content_image|media }}"
                                          alt="{{ project.title }}"
