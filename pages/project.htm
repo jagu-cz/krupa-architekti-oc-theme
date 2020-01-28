@@ -20,7 +20,6 @@ function onStart() { $this['project'] = \Jagu\KrupaArchitekti\Models\Project::wh
 
     <section>
         <div class="container">
-            {{ debug(project.data) }}
             {% for row in project.data %}
                 <div class="row">
                     {% for column in row.columns %}
@@ -30,10 +29,16 @@ function onStart() { $this['project'] = \Jagu\KrupaArchitekti\Models\Project::wh
                                     {{ column.content_text|raw }}
                                 </div>
                             {% elseif column.content_type == 'image' %}
-                                <img class="project-photo {{ column.vertical_align }}"
-                                     src="{{ column.content_image|media }}"
-                                     alt="{{ project.title }}"
+                                <a href="{{ column.content_image|media }}"
+                                   data-lightbox="lightbox"
+                                   data-title="{{ project.title }}"
                                 >
+                                    {{ debug(column.content_image) }}
+                                    <img class="project-photo {{ column.vertical_align }}"
+                                         src="{{ column.content_image|media }}"
+                                         alt="{{ project.title }}"
+                                    >
+                                </a>
                             {% endif %}
                         </div>
                     {% endfor %}
