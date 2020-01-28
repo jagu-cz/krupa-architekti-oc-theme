@@ -29,15 +29,17 @@ function onStart() { $this['project'] = \Jagu\KrupaArchitekti\Models\Project::wh
                                     {{ column.content_text|raw }}
                                 </div>
                             {% elseif column.content_type == 'image' %}
-                                <a href="{{ column.content_image|media }}"
-                                   data-lightbox="lightbox"
-                                   data-title="{{ project.title }}"
-                                >
-                                    <img class="project-photo {{ column.vertical_align }}"
-                                         src="{{ column.content_image|media }}"
-                                         alt="{{ project.title }}"
+                                <div class="{{ column.vertical_align }}">
+                                    <a href="{{ column.content_image|media }}"
+                                       data-lightbox="lightbox"
+                                       data-title="{{ project.title }}"
                                     >
-                                </a>
+                                        <img class="project-photo"
+                                             src="{{ column.content_image|media }}"
+                                             alt="{{ project.title }}"
+                                        >
+                                    </a>
+                                </div>
                             {% endif %}
                         </div>
                     {% endfor %}
