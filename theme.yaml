@@ -8,4 +8,3 @@ form: config/theme.yaml
 require:
     - Jagu.KrupaArchitekti
     - RainLab.Pages
-    - Tschallacka.FormTools

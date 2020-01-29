@@ -1,11 +1,15 @@
-<footer id="footer" style="background-color: {{ this.theme.footer_background_color }}">
-    <div class="container" style="color: {{ this.theme.footer_text_color }}">
+<footer id="footer">
+    <div class="container">
         <div class="row">
-        {% for col in this.theme.footer_cols %}
-            <div class="{{ col.footer_col_size }}">
-                {{ col.footer_col_text|raw }}
-            </div>
-        {% endfor %}
+            {% for col in this.theme.footer_cols %}
+                <div class="{{ col.footer_col_size }}">
+                    {{ col.footer_col_text|raw }}
+                </div>
+            {% endfor %}
+        </div>
+        <div class="footer-delimiter"></div>
+        <div class="copyright">
+            Created by <a class="jagulogo-jagu-line" href="http://jagu.cz/">Jagu s.r.o.</a>
         </div>
     </div>
 </footer>

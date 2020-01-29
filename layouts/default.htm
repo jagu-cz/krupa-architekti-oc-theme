@@ -26,34 +26,40 @@ default = 1
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- Custom SCSS -->
     <link href="{{ ['assets/scss/theme.scss']|theme }}" rel="stylesheet">
+    <!-- Jagu s.r.o. -->
+    <link rel="stylesheet" id="jagu-logo" href="https://projects.jagu.cz/fonts/jagu-logo.css" type="text/css" media="all">
     {% styles %}
 </head>
 <body>
 
-<!-- Header -->
-<header id="layout-header">
-    {% partial 'site/header' %}
-</header>
+<div class="color-scheme-{{ this.theme.general_color_scheme }}">
 
-<!-- Content -->
-<section id="layout-content">
-    <!-- Repeater -->
-    {repeater name="sections" groups="~/themes/jagu-krupa-architekti-jagu-oc-theme/meta/blocks.yaml" tab="Blocks"}
-    {variable name="_dummy" type="text"}{/variable}
-    {/repeater}
-    <!-- Render blocks -->
-    {% for section in sections %}
-        {% partial 'blocks/' ~ section._group data=section %}
-    {% endfor %}
+    <!-- Header -->
+    <header id="layout-header">
+        {% partial 'site/header' %}
+    </header>
 
-    {% page %}
+    <!-- Content -->
+    <section id="layout-content">
+        <!-- Repeater -->
+        {repeater name="sections" groups="~/themes/jagu-krupa-architekti-jagu-oc-theme/meta/blocks.yaml" tab="Blocks"}
+        {variable name="_dummy" type="text"}{/variable}
+        {/repeater}
+        <!-- Render blocks -->
+        {% for section in sections %}
+            {% partial 'blocks/' ~ section._group data=section %}
+        {% endfor %}
 
-</section>
+        {% page %}
 
-<!-- Footer -->
-<footer id="layout-footer">
-    {% partial 'site/footer' %}
-</footer>
+    </section>
+
+    <!-- Footer -->
+    <footer id="layout-footer">
+        {% partial 'site/footer' %}
+    </footer>
+
+</div>
 
 <!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

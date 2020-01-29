@@ -1,5 +1,21 @@
 tabs:
     fields:
+
+        ####################################################
+        # Tab: General
+        ####################################################
+        general_section:
+            tab: Obecné
+            label: Obecné
+            type: section
+        general_color_scheme:
+            tab: Obecné
+            label: Barevné schéma
+            type: balloon-selector
+            default: 'dark'
+            options:
+                dark: Tmavé pozadí, světlý text
+                light: Světlé pozadí, tmavý text
         ####################################################
         # Tab: Nav
         ####################################################
@@ -7,17 +23,6 @@ tabs:
             tab: Menu
             label: Menu
             type: section
-        nav_background_color:
-            tab: Menu
-            label: Barva pozadí menu
-            type: tsch_color_picker
-            allowEmpty: true
-            span: left
-        nav_text_color:
-            tab: Menu
-            label: Barva textu menu
-            type: tsch_color_picker
-            span: right
         nav_logo:
             tab: Menu
             label: Logo
@@ -30,16 +35,6 @@ tabs:
             tab: Patička
             label: Patička
             type: section
-        footer_background_color:
-            tab: Patička
-            label: Barva pozadí patičky
-            type: tsch_color_picker
-            span: left
-        footer_text_color:
-            tab: Patička
-            label: Barva textu patičky
-            type: tsch_color_picker
-            span: right
         footer_cols_section:
             tab: Patička
             label: Obsah

@@ -1,4 +1,4 @@
-<header id="header" style="background-color: {{ this.theme.nav_background_color }}">
+<header id="header">
     <nav class="container navbar navbar-expand-lg navbar-dark">
         <a class="navbar-brand" href="#">
             {% if this.theme.nav_logo %}
@@ -19,7 +19,6 @@
                     <li class="nav-item">
                         <a href="{{ item.url }}"
                            class="nav-link {% if item.isActive %}active{% endif %}"
-                           style="color: {{ this.theme.nav_text_color }}"
                         >
                             {{ item.title }}
                         </a>
