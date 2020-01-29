@@ -22,6 +22,9 @@ pagetitle:
         title:
             label: Title
             type: text
+        margin:
+            label: Horní odsazení
+            type: checkbox
 
 editor:
     name: Text editor
@@ -42,4 +45,13 @@ gallery:
     fields:
         section:
             label: Gallery
+            type: section
+
+contactform:
+    name: Contact form
+    description: Contact form
+    icon: icon-envelope
+    fields:
+        section:
+            label: Contact form
             type: section

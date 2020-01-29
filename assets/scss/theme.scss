@@ -1,5 +1,4 @@
 // variables
-$header-padding: 100px;
 $footer-padding: 3em;
 
 // SCSS
@@ -21,14 +20,14 @@ p, h1, h2, h3, h4, h5, h6 {
 .color-scheme-light {
     #layout-header {
         #header {
-            background-color: rgba(255, 255, 255, 0.3);
+            background-color: rgba(255, 255, 255, 0.9);
 
             .navbar {
                 .nav-link {
-                    color: #FFFFFF;
+                    color: #808080;
 
                     &:before {
-                        background-color: #FFFFFF;
+                        background-color: #808080;
                     }
                 }
             }
@@ -66,6 +65,7 @@ p, h1, h2, h3, h4, h5, h6 {
     #layout-footer {
         #footer {
             background-color: #EEEEEE;
+            margin-top: 100px;
 
             .container {
                 color: #808080;
@@ -159,6 +159,10 @@ p, h1, h2, h3, h4, h5, h6 {
         color: #808080;
         font-weight: 300;
     }
+
+    .top-margin {
+        margin-top: 100px;
+    }
 }
 
 .editor {
@@ -191,6 +195,30 @@ p, h1, h2, h3, h4, h5, h6 {
 
     .project-photo {
         width: 100%;
+    }
+}
+
+.contact-form {
+    .form-control {
+        border-color: #808080;
+    }
+
+    .btn {
+        &.btn-outline-primary {
+            color: #808080;
+            border-color: #808080;
+
+            &:active, &:hover {
+                color: #FFFFFF;
+                background-color: #808080;
+            }
+        }
+
+        .alert {
+            p, ul {
+                margin-bottom: 0;
+            }
+        }
     }
 }
 

@@ -1,0 +1,34 @@
+<form data-request="{{ __SELF__ }}::onFormSubmit">
+
+    {{ form_token() }}
+
+    <div id="{{ __SELF__ }}_forms_flash"></div>
+
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <label for="name">Vaše jméno</label>
+                <input type="text" id="name" name="name" class="form-control">
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="form-group">
+                <label for="email">Váš e-mail</label>
+                <input type="text" id="email" name="email" class="form-control">
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="comments">Vaše zpráva</label>
+        <textarea id="comments" name="comments" class="form-control" rows="8"></textarea>
+    </div>
+
+    <div class="form-group">
+        {% partial '@recaptcha' %}
+    </div>
+
+    <button type="submit" class="btn btn-outline-primary">Odeslat dotaz</button>
+
+</form>
