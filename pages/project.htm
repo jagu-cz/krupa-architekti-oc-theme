@@ -6,7 +6,7 @@ is_hidden = 0
 function onStart() { $this['project'] = \Jagu\KrupaArchitekti\Models\Project::where('slug', $this->param('slug'))->first(); }
 ==
 {# header image #}
-{% set headerImageData = {'image': project.cover_image} %}
+{% set headerImageData = { 'images': [ { 'image': project.cover_image, 'media_type': 'image' } ] } %}
 {% partial 'blocks/headerimage' data=headerImageData %}
 
 {# Project detail #}

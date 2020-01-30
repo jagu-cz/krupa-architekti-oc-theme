@@ -1,21 +1,28 @@
 headerimage:
-    name: Header image
-    description: Full-width and full-height header image
+    name: Header image/video
+    description: Full-width and full-height header image or video
     icon: icon-image
     fields:
         section:
-            label: Header image
+            label: Header image/video
             type: section
         images:
-            label: Images
+            label: Images/videos
             type: repeater
-            prompt: Add image
+            prompt: Add image or video
             form:
                 fields:
+                    media_type:
+                        label: Druh média
+                        type: radio
+                        default: 'image'
+                        options:
+                            'image': Obrázek
+                            'video': Video
                     image:
                         label: Image
                         type: mediafinder
-                        mode: image
+                        mode: file
 
 pagetitle:
     name: Page title

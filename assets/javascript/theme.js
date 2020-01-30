@@ -21,9 +21,11 @@ $(function () {
 let adjustHeaderImageHeight = function () {
     let height = $(window).height();
     $(".header-image").height(height);
+    $(".header-video").height(height);
+    $(".video-container").height(height);
 };
 
 // LightBox
 lightbox.option({
-    albumLabel:'%1/%2'
+    albumLabel: '%1/%2'
 });
