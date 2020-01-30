@@ -2,5 +2,9 @@ description = "Header image"
 
 [viewBag]
 ==
-{% set image = random(data.images)|first %}
+{% if data.image %}
+    {% set image = data.image%}
+{% else %}
+    {% set image = random(data.images)|first %}
+{% endif %}
 <div class="header-image" style="background-image: url('{{ image|media }}')"></div>
