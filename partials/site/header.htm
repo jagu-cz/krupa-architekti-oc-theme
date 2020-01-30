@@ -2,7 +2,10 @@
     <nav class="container navbar navbar-expand-lg navbar-dark">
         <a class="navbar-brand" href="/">
             {% if this.theme.nav_logo %}
-                <img src="{{ this.theme.nav_logo.getPath() }}" height="40" alt="{{ this.theme.nav_logo.title }}">
+                <img src="{{ this.theme.nav_logo.getPath() }}"
+                     height="{{ this.theme.nav_logo_height }}"
+                     alt="{{ this.theme.nav_logo.title }}"
+                >
             {% endif %}
         </a>
         <button class="navbar-toggler"

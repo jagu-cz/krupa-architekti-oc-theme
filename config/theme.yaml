@@ -28,6 +28,13 @@ tabs:
             label: Logo
             type: fileupload
             mode: image
+            span: left
+        nav_logo_height:
+            tab: Menu
+            label: Výška loga
+            type: number
+            default: 40
+            span: right
         ####################################################
         # Tab: Footer
         ####################################################
