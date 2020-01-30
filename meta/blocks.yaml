@@ -4,12 +4,18 @@ headerimage:
     icon: icon-image
     fields:
         section:
-            label: Image
+            label: Header image
             type: section
-        image:
-            label: Image
-            type: mediafinder
-            mode: image
+        images:
+            label: Images
+            type: repeater
+            prompt: Add image
+            form:
+                fields:
+                    image:
+                        label: Image
+                        type: mediafinder
+                        mode: image
 
 pagetitle:
     name: Page title
