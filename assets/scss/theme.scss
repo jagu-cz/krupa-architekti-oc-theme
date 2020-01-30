@@ -156,8 +156,8 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .video-container {
     position: relative;
-    min-height:100%;
-    overflow:hidden;
+    min-height: 100%;
+    overflow: hidden;
 
     .header-video {
         position: absolute;
@@ -220,8 +220,14 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .contact-form {
-    .form-control {
-        border-color: #808080;
+    .form-group {
+        .form-control {
+            border-color: #AAAAAA;
+        }
+
+        label {
+            color: #808080;
+        }
     }
 
     .btn {
