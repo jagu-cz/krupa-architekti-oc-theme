@@ -1,0 +1,26 @@
+items:
+    -
+        title: 'O nás'
+        nesting: '0'
+        type: static-page
+        url: ''
+        code: ''
+        reference: o-nas
+        cmsPage: ''
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Kontakt
+        nesting: '0'
+        type: static-page
+        code: ''
+        reference: kontakt
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+name: 'Main menu'
