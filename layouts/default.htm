@@ -32,12 +32,17 @@ recaptcha_size = "normal"
 <html lang="cs">
 <head>
     <meta charset="utf-8">
-    <title>Krůpa Architekti | {{ this.page.title }}</title>
-    <meta name="description" content="{{ this.page.meta_description }}">
+    <title>Martin Krůpa Architekti | {{ this.page.title }}</title>
+
     <meta name="title" content="{{ this.page.meta_title }}">
+    <meta name="description" content="{{ this.page.meta_description }}">
+
     <meta name="author" content="Jagu s.r.o.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="OctoberCMS">
+
+    <link rel="canonical" href="{{ url_current() }}">
+
     <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}">
     <!-- LightBox -->
     <link rel="stylesheet" href="{{ 'assets/lightbox/css/lightbox.css'|theme }}">

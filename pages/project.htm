@@ -1,9 +1,13 @@
 title = "Project"
 url = "/projekt/:slug"
 layout = "default"
+meta_title = "Martin Krůpa Architekti - Projekty"
+meta_description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dignissim viverra nibh, in volutpat tellus viverra sed. Phasellus congue suscipit elit in semper. Aliquam mattis tincidunt metus, lacinia euismod mauris pretium eu. Mauris ultrices at est eget lobortis. Ut sed lectus mattis, tincidunt nulla vel, fringilla augue."
 is_hidden = 0
 ==
+<?php
 function onStart() { $this['project'] = \Jagu\KrupaArchitekti\Models\Project::where('slug', $this->param('slug'))->first(); }
+?>
 ==
 {# header image #}
 {% set headerImageData = { 'images': [ { 'image': project.cover_image, 'media_type': 'image' } ] } %}
