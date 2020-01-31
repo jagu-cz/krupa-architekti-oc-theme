@@ -12,6 +12,11 @@ headerimage:
         title:
             label: Title
             type: text
+            span: left
+        subtitle:
+            label: Subtitle
+            type: text
+            span: right
         title_color:
             label: Title color
             type: colorpicker

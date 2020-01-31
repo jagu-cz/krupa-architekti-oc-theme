@@ -15,8 +15,13 @@ description = "Header image"
 
 {% if data.title %}
     <div class="header-image-title d-flex justify-content-center align-items-center {% if data.overlay %}overlay{% endif %}">
-        <h1 style="color: {{ data.title_color }}">
-            {{ data.title }}
-        </h1>
+        <div class="header-image-title-wrapper">
+            <h1 style="color: {{ data.title_color }}">
+                {{ data.title }}
+            </h1>
+            <h3 class="mt-5" style="color: {{ data.title_color }}">
+                {{ data.subtitle }}
+            </h3>
+        </div>
     </div>
 {% endif %}
