@@ -23,6 +23,7 @@ let adjustHeaderImageHeight = function () {
     $(".header-image").height(height);
     $(".header-video").height(height);
     $(".video-container").height(height);
+    $(".header-image-title").height(height);
 };
 
 // LightBox

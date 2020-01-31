@@ -6,6 +6,15 @@ headerimage:
         section:
             label: Header image/video
             type: section
+        overlay:
+            label: Overlay
+            type: switch
+        title:
+            label: Title
+            type: text
+        title_color:
+            label: Title color
+            type: colorpicker
         images:
             label: Images/videos
             type: repeater

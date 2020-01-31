@@ -12,3 +12,11 @@ description = "Header image"
         </video>
     </div>
 {% endif %}
+
+{% if data.title %}
+    <div class="header-image-title d-flex justify-content-center align-items-center {% if data.overlay %}overlay{% endif %}">
+        <h1 style="color: {{ data.title_color }}">
+            {{ data.title }}
+        </h1>
+    </div>
+{% endif %}
