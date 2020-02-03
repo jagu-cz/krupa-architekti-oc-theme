@@ -2,21 +2,6 @@ tabs:
     fields:
 
         ####################################################
-        # Tab: General
-        ####################################################
-        general_section:
-            tab: Obecné
-            label: Obecné
-            type: section
-        general_color_scheme:
-            tab: Obecné
-            label: Barevné schéma
-            type: balloon-selector
-            default: 'dark'
-            options:
-                dark: Tmavé pozadí, světlý text
-                light: Světlé pozadí, tmavý text
-        ####################################################
         # Tab: Nav
         ####################################################
         nav_section:
