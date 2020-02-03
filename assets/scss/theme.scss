@@ -16,64 +16,6 @@ p, h1, h2, h3, h4, h5, h6 {
     font-weight: 200;
 }
 
-// color schemes
-.color-scheme-light {
-    #layout-header {
-        #header {
-            background-color: rgba(255, 255, 255, 0.9);
-
-            .navbar {
-                .nav-link {
-                    color: #808080;
-
-                    &:before {
-                        background-color: #808080;
-                    }
-                }
-            }
-        }
-    }
-
-    #layout-footer {
-        #footer {
-            background-color: #EEEEEE;
-
-            .container {
-                color: #808080;
-            }
-        }
-    }
-}
-
-.color-scheme-dark {
-    #layout-header {
-        #header {
-            background-color: rgba(0, 0, 0, 0.3);
-
-            .navbar {
-                .nav-link {
-                    color: #FFFFFF;
-
-                    &:before {
-                        background-color: #FFFFFF;
-                    }
-                }
-            }
-        }
-    }
-
-    #layout-footer {
-        #footer {
-            background-color: #EEEEEE;
-            margin-top: 100px;
-
-            .container {
-                color: #808080;
-            }
-        }
-    }
-}
-
 // layouts
 #layout-header {
     #header {
@@ -81,7 +23,8 @@ p, h1, h2, h3, h4, h5, h6 {
         position: fixed;
         top: 0;
         width: 100%;
-        transition: top 0.5s;
+        background-color: rgba(0, 0, 0, 0);
+        transition: all 0.5s ease;
 
         .navbar {
             padding-top: 1rem;
@@ -89,8 +32,8 @@ p, h1, h2, h3, h4, h5, h6 {
 
             .nav-link {
                 position: relative;
-                padding-bottom: .3rem;
-                margin: .5rem;
+                padding: 0 0 .3rem 0;
+                margin: 0 1rem;
                 transition: opacity 0.3s linear;
 
                 &:before {
@@ -112,6 +55,42 @@ p, h1, h2, h3, h4, h5, h6 {
                         visibility: visible;
                         -webkit-transform: scaleX(1);
                         transform: scaleX(1);
+                    }
+                }
+            }
+        }
+    }
+
+    &.light {
+        #header {
+            &.show-background {
+                background-color: rgba(255, 255, 255, 0.9);
+            }
+
+            .navbar {
+                .nav-link {
+                    color: #808080;
+
+                    &:before {
+                        background-color: #808080;
+                    }
+                }
+            }
+        }
+    }
+
+    &.dark {
+        #header {
+            &.show-background {
+                background-color: rgba(0, 0, 0, 0.3);
+            }
+
+            .navbar {
+                .nav-link {
+                    color: #FFFFFF;
+
+                    &:before {
+                        background-color: #FFFFFF;
                     }
                 }
             }

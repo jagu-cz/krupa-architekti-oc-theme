@@ -1,32 +1,11 @@
-description = "Světlé menu"
+description = "Tmavé menu"
 
 [staticMenu]
 code = "main-menu"
 
 [staticPage]
 useContent = 0
-default = 1
-
-[gallery]
-
-[genericForm]
-rules[name] = "required"
-rules[email] = "required|email"
-rules[comments] = "required"
-rules_messages[required] = "Toto pole je povinné"
-rules_messages[email] = "Zadejte platnou e-mailovou adresu"
-messages_success = "Váš dotaz byl odeslán"
-messages_errors = "Během odesílání dotazu došlo k chybě"
-mail_enabled = 1
-mail_subject = "práva z kontaktního formuláře"
-mail_recipients[] = "erben.marek@gmail.com"
-inline_errors = "disabled"
-sanitize_data = "disabled"
-anonymize_ip = "disabled"
-recaptcha_enabled = 0
-recaptcha_theme = "light"
-recaptcha_type = "image"
-recaptcha_size = "normal"
+default = 0
 ==
 <!DOCTYPE html>
 <html lang="cs">
@@ -38,7 +17,7 @@ recaptcha_size = "normal"
 <div class="color-scheme-{{ this.theme.general_color_scheme }}">
 
     <!-- Header -->
-    <header id="layout-header" class="light">
+    <header id="layout-header" class="dark">
         {% partial 'site/header' %}
     </header>
 
