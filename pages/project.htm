@@ -37,6 +37,7 @@ function onStart() { $this['project'] = \Jagu\KrupaArchitekti\Models\Project::wh
                                     <a href="{{ column.content_image|media }}"
                                        data-lightbox="lightbox"
                                        data-title="{{ project.title }}"
+                                       class="fancy-hover-cursor"
                                     >
                                         <img class="project-photo"
                                              src="{{ column.content_image|media }}"
@@ -45,7 +46,7 @@ function onStart() { $this['project'] = \Jagu\KrupaArchitekti\Models\Project::wh
                                     </a>
                                 </div>
                             {% elseif column.content_type == 'video' %}
-                                <video class="w-100 h-100" autoplay muted loop>
+                                <video width="100%" autoplay muted loop>
                                     <source src="{{ column.content_video|media }}" type="video/mp4">
                                 </video>
                             {% endif %}

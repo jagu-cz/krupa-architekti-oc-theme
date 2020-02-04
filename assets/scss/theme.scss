@@ -275,3 +275,30 @@ p, h1, h2, h3, h4, h5, h6 {
         position: relative;
     }
 }
+
+// lightbox customization & custom fancy cursors
+.lb-nav a.lb-prev:hover, .lb-nav a.lb-next:hover {
+    opacity: 0 !important;
+}
+
+.lb-nav a.lb-prev:hover {
+    cursor: e-resize;
+    cursor: url('../../assets/images/cursor-left.png') 28 26, e-resize;
+    cursor: -webkit-image-set(url('../../assets/images/cursor-left.png') 1x, url('../../assets/images/cursor-left.png') 2x) 28 26, e-resize;
+}
+
+.lb-nav a.lb-next:hover {
+    cursor: e-resize;
+    cursor: url('../../assets/images/cursor-right.png') 28 26, e-resize;
+    cursor: -webkit-image-set(url('../../assets/images/cursor-right.png') 1x, url('../../assets/images/cursor-right.png') 2x) 28 26, e-resize;
+}
+
+a {
+    &.fancy-hover-cursor {
+        &:hover {
+            cursor: crosshair;
+            cursor: url('../../assets/images/cursor-pointer.png') 36 36, crosshair;
+            cursor: -webkit-image-set(url('../../assets/images/cursor-pointer.png') 1x, url('../../assets/images/cursor-pointer.png'), 2x) 36 36, crosshair;
+        }
+    }
+}
