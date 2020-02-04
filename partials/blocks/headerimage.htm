@@ -6,8 +6,8 @@ description = "Header image"
 {% if image.media_type == 'image' %}
     <div class="header-image" style="background-image: url('{{ image.image|media }}')"></div>
 {% elseif image.media_type == 'video' %}
-    <div class="w-100 video-container">
-        <video class="w-100 header-video" autoplay muted loop>
+    <div class="video-container">
+        <video width="100%" class="header-video" autoplay muted loop>
             <source src="{{ image.image|media }}" type="video/mp4">
         </video>
     </div>
