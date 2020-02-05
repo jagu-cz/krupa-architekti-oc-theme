@@ -1,5 +1,7 @@
 // variables
 $footer-padding: 3em;
+$dark-navbar-toggler-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='#808080' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+$light-navbar-toggler-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='#FFFFFF' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 
 // SCSS
 html {
@@ -61,10 +63,22 @@ p, h1, h2, h3, h4, h5, h6 {
         }
     }
 
+    // light background, dark text
     &.light {
         #header {
             &.show-background {
                 background-color: rgba(255, 255, 255, 0.9);
+            }
+
+            .navbar-light {
+                .navbar-toggler {
+                    color: #808080;
+                    border-color: #808080;
+
+                    .navbar-toggler-icon {
+                        background-image: $dark-navbar-toggler-icon;
+                    }
+                }
             }
 
             .navbar {
@@ -79,10 +93,43 @@ p, h1, h2, h3, h4, h5, h6 {
         }
     }
 
-    &.dark {
+    // light background, dark text, onscroll on top text becomes light
+    &.light-dynamic {
         #header {
             &.show-background {
-                background-color: rgba(0, 0, 0, 0.3);
+                background-color: rgba(255, 255, 255, 0.9);
+
+                .navbar {
+                    .nav-link {
+                        color: #808080;
+
+                        &:before {
+                            background-color: #808080;
+                        }
+                    }
+                }
+
+                .navbar-light {
+                    .navbar-toggler {
+                        color: #808080;
+                        border-color: #808080;
+
+                        .navbar-toggler-icon {
+                            background-image: $dark-navbar-toggler-icon;
+                        }
+                    }
+                }
+            }
+
+            .navbar-light {
+                .navbar-toggler {
+                    color: #FFFFFF;
+                    border-color: #FFFFFF;
+
+                    .navbar-toggler-icon {
+                        background-image: $light-navbar-toggler-icon;
+                    }
+                }
             }
 
             .navbar {
@@ -91,6 +138,87 @@ p, h1, h2, h3, h4, h5, h6 {
 
                     &:before {
                         background-color: #FFFFFF;
+                    }
+                }
+            }
+        }
+    }
+
+    // dark background, light text
+    &.dark {
+        #header {
+            &.show-background {
+                background-color: rgba(0, 0, 0, 0.3);
+            }
+
+            .navbar-dark {
+                .navbar-toggler {
+                    color: #FFFFFF;
+                    border-color: #FFFFFF;
+
+                    .navbar-toggler-icon {
+                        background-image: $light-navbar-toggler-icon;
+                    }
+                }
+            }
+
+            .navbar {
+                .nav-link {
+                    color: #FFFFFF;
+
+                    &:before {
+                        background-color: #FFFFFF;
+                    }
+                }
+            }
+        }
+    }
+
+    // dark background, light text, onscroll on top text becomes dark
+    &.dark-dynamic {
+        #header {
+            &.show-background {
+                background-color: rgba(0, 0, 0, 0.3);
+
+                .navbar {
+                    .nav-link {
+                        color: #FFFFFF;
+
+                        &:before {
+                            background-color: #FFFFFF;
+                        }
+                    }
+                }
+
+                .navbar-dark {
+                    .navbar-toggler {
+                        color: #FFFFFF;
+                        border-color: #FFFFFF;
+
+                        .navbar-toggler-icon {
+                            background-image: $light-navbar-toggler-icon;
+                        }
+                    }
+                }
+            }
+
+            .navbar-dark {
+                .navbar-toggler {
+                    color: #808080;
+                    border-color: #808080;
+
+                    .navbar-toggler-icon {
+                        background-image: $dark-navbar-toggler-icon;
+                    }
+                }
+            }
+
+            .navbar {
+                .nav-link {
+                    color: #808080;
+
+                    &:before {
+                        background-color: #808080;
                     }
                 }
             }

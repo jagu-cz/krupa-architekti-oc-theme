@@ -6,7 +6,9 @@ meta_description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qui
 is_hidden = 0
 ==
 <?php
-function onStart() { $this['project'] = \Jagu\KrupaArchitekti\Models\Project::where('slug', $this->param('slug'))->first(); }
+function onInit() {
+    $this['project'] = \Jagu\KrupaArchitekti\Models\Project::where('slug', $this->param('slug'))->first();
+}
 ?>
 ==
 {# header image #}

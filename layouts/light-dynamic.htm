@@ -1,7 +1,11 @@
-description = "Tmavé pozadí menu, světlý text"
+description = "Svtlé pozadí menu, tmavý text, při nascrollování nahoru text zesvětlá"
 
 [staticMenu]
 code = "main-menu"
+
+[staticPage]
+useContent = 0
+default = 1
 
 [gallery]
 
@@ -24,12 +28,6 @@ recaptcha_theme = "light"
 recaptcha_type = "image"
 recaptcha_size = "normal"
 ==
-function onStart() {
-    if ($this['project']) {
-        $this['layout'] = $this['project']->layout;
-    }
-}
-==
 <!DOCTYPE html>
 <html lang="cs">
 
@@ -40,8 +38,8 @@ function onStart() {
 <div class="color-scheme-{{ this.theme.general_color_scheme }}">
 
     <!-- Header -->
-    <header id="layout-header" class="{{ layout }}">
-        {% partial 'site/header' navbarStyle='navbar-dark'%}
+    <header id="layout-header" class="light-dynamic">
+        {% partial 'site/header' navbarStyle='navbar-light' %}
     </header>
 
     <!-- Content -->
