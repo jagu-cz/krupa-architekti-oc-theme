@@ -37,14 +37,14 @@ function onInit() {
                                     </div>
                                 </div>
                             {% elseif column.content_type == 'image' %}
-                                <div class="{{ column.vertical_align }}">
+                                <div class="{{ column.vertical_align }} w-100">
                                     <a href="{{ column.content_image|media }}"
                                        data-lightbox="lightbox"
                                        data-title="{{ project.title }}"
                                        class="fancy-hover-cursor"
                                     >
                                         <img class="project-photo"
-                                             src="{{ column.content_image|media }}"
+                                             src="{{ column.content_image|media|resize(1000, false, { quality: '50' }) }}"
                                              alt="{{ project.title }}"
                                         >
                                     </a>
