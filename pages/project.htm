@@ -25,14 +25,16 @@ function onInit() {
     </section>
 
     <section>
-        <div class="container">
+        <div class="{% if project.full_width %}container-fluid{% else %}container{% endif %}">
             {% for row in project.data %}
                 <div class="row">
                     {% for column in row.columns %}
                         <div class="{{ column.width }} {{ column.right_margin }} {{ column.left_margin }} mb-md-5 mb-sm-3 d-flex">
                             {% if column.content_type == 'text' %}
-                                <div class="project-text" {{ column.vertical_align }}>
-                                    {{ column.content_text|raw }}
+                                <div class="{% if project.full_width %}container{% endif %}">
+                                    <div class="project-text" {{ column.vertical_align }}>
+                                        {{ column.content_text|raw }}
+                                    </div>
                                 </div>
                             {% elseif column.content_type == 'image' %}
                                 <div class="{{ column.vertical_align }}">
