@@ -6,32 +6,63 @@ headerimage:
         section:
             label: Header image/video
             type: section
+        random_content:
+            label: Random content
+            comment: Header image will be chosen randomly from header images of all projects
+            type: switch
+        custom_content_section:
+            label: Custom content
+            type: section
+            trigger:
+                action: show
+                condition: unchecked
+                field: random_content
         overlay:
             label: Overlay
             type: switch
+            trigger:
+                action: show
+                condition: unchecked
+                field: random_content
         title:
             label: Title
             type: text
             span: left
+            trigger:
+                action: show
+                condition: unchecked
+                field: random_content
         subtitle:
             label: Subtitle
             type: text
             span: right
+            trigger:
+                action: show
+                condition: unchecked
+                field: random_content
         title_color:
             label: Title color
             type: colorpicker
+            trigger:
+                action: show
+                condition: unchecked
+                field: random_content
         images:
             label: Images/videos
             type: repeater
             prompt: Add image or video
+            trigger:
+                action: show
+                condition: unchecked
+                field: random_content
             form:
                 fields:
                     media_type:
-                        label: Druh média
+                        label: Media type
                         type: radio
                         default: 'image'
                         options:
-                            'image': Obrázek
+                            'image': Image
                             'video': Video
                     image:
                         label: Image
