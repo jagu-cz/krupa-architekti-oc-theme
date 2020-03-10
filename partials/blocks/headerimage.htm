@@ -8,7 +8,6 @@ function onStart() {
 }
 ==
 {% if data.random_content %}
-    {{ debug(randomProject) }}
     {% set image = { 'image': randomProject.cover_image, 'media_type': 'image' } %}
 {% else %}
     {% set image = random(data.images) %}
