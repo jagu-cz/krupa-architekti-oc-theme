@@ -29,7 +29,7 @@ function onInit() {
             {% for row in project.data %}
                 <div class="row">
                     {% for column in row.columns %}
-                        <div class="{{ column.width }} {{ column.right_margin }} {{ column.left_margin }} mb-md-5 mb-sm-3 d-flex">
+                        <div class="{{ column.width }} {{ column.right_margin }} {{ column.left_margin }} mb-3 d-flex">
                             {% if column.content_type == 'text' %}
                                 <div class="{% if project.full_width %}container{% endif %}">
                                     <div class="project-text" {{ column.vertical_align }}>
@@ -44,7 +44,12 @@ function onInit() {
                                        class="fancy-hover-cursor"
                                     >
                                         <img class="project-photo"
-                                             src="{{ column.content_image|media|resize(1000, false, { quality: '50' }) }}"
+                                             src="{{ column.content_image|media }}"
+                                             srcset="
+                                                {{ column.content_image|media|resize(600, false, { quality: '70' }) }} 600w,
+                                                {{ column.content_image|media|resize(1024, false, { quality: '70' }) }} 1024w,
+                                                {{ column.content_image|media|resize(1600, false, { quality: '70' }) }} 1600w
+                                                {{ column.content_image|media|resize(1920, false, { quality: '70' }) }} 1920w"
                                              alt="{{ project.title }}"
                                         >
                                     </a>

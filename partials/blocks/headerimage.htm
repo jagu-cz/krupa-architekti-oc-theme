@@ -18,7 +18,7 @@ function onStart() {
 {% elseif image.media_type == 'video' %}
     <div class="video-container">
         <video width="100%" class="header-video" autoplay muted loop>
-            <source src="{{ image.image|media }}" type="video/mp4">
+            <source src="{{ image.image|media|resize(2000, false, { quality: '70' }) }}" type="video/mp4">
         </video>
     </div>
 {% endif %}
