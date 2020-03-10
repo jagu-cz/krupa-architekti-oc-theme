@@ -20,7 +20,9 @@ function onInit() {
     <section class="section">
         <div class="container">
             <h1 class="project-title">{{ project.title }}</h1>
-            <div class="project-description">{{ project.description|raw }}</div>
+            {% if project.description %}
+                <div class="project-description">{{ project.description|raw }}</div>
+            {% endif %}
         </div>
     </section>
 
@@ -46,10 +48,11 @@ function onInit() {
                                         <img class="project-photo"
                                              src="{{ column.content_image|media }}"
                                              srcset="
-                                                {{ column.content_image|media|resize(600, false, { quality: '70' }) }} 600w,
-                                                {{ column.content_image|media|resize(1024, false, { quality: '70' }) }} 1024w,
-                                                {{ column.content_image|media|resize(1600, false, { quality: '70' }) }} 1600w,
-                                                {{ column.content_image|media|resize(1920, false, { quality: '70' }) }} 1920w"
+                                                {{ column.content_image|media|resize(600, false, { quality: '70', sharpen: '10' }) }} 600w,
+                                                {{ column.content_image|media|resize(1024, false, { quality: '70', sharpen: '10' }) }} 1024w,
+                                                {{ column.content_image|media|resize(1600, false, { quality: '70', sharpen: '10' }) }} 1600w,
+                                                {{ column.content_image|media|resize(1920, false, { quality: '70', sharpen: '10' }) }} 1920w,
+                                                {{ column.content_image|media|resize(2560, false, { quality: '70', sharpen: '10' }) }} 2560w"
                                              alt="{{ project.title }}"
                                         >
                                     </a>
