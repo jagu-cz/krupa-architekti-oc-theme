@@ -14,11 +14,11 @@ function onStart() {
 {% endif %}
 
 {% if image.media_type == 'image' %}
-    <div class="header-image" style="background-image: url('{{ image.image|media }}')"></div>
+    <div class="header-image" style="background-image: url('{{ image.image|media|resize(2000, false, { quality: '70' }) }}')"></div>
 {% elseif image.media_type == 'video' %}
     <div class="video-container">
         <video width="100%" class="header-video" autoplay muted loop>
-            <source src="{{ image.image|media|resize(2000, false, { quality: '70' }) }}" type="video/mp4">
+            <source src="{{ image.image|media }}" type="video/mp4">
         </video>
     </div>
 {% endif %}
