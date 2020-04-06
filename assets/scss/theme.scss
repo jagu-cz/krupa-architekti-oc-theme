@@ -389,6 +389,12 @@ p, h1, h2, h3, h4, h5, h6 {
     }
 }
 
+.alert {
+    p {
+        margin-bottom: 0;
+    }
+}
+
 // copyright
 .copyright {
     text-align: center;
