@@ -6,6 +6,10 @@ headerimage:
         section:
             label: Header image/video
             type: section
+        header_image_fit_height:
+            label: Header image fit height
+            type: switch
+            default: true
         random_content:
             label: Random content
             comment: Header image will be chosen randomly from header images of all projects

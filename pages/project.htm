@@ -12,7 +12,10 @@ function onInit() {
 ?>
 ==
 {# header image #}
-{% set headerImageData = { 'images': [ { 'image': project.cover_image, 'media_type': 'image' } ] } %}
+{% set headerImageData = {
+    'images': [ { 'image': project.cover_image, 'media_type': 'image' } ],
+    'header_image_fit_height': project.header_image_fit_height
+} %}
 {% partial 'blocks/headerimage' data=headerImageData %}
 
 {# Project detail #}

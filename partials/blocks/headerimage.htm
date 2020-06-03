@@ -13,25 +13,72 @@ function onStart() {
     {% set image = random(data.images) %}
 {% endif %}
 
-{% if image.media_type == 'image' %}
-    <div class="header-image" style="background-image: url('{{ image.image|media|resize(2000, false, { quality: '70' }) }}')"></div>
-{% elseif image.media_type == 'video' %}
-    <div class="video-container">
-        <video width="100%" class="header-video" autoplay muted loop>
-            <source src="{{ image.image|media }}" type="video/mp4">
-        </video>
-    </div>
-{% endif %}
-
-{% if data.title %}
-    <div class="header-image-title d-flex justify-content-center align-items-center {% if data.overlay %}overlay{% endif %}">
-        <div class="header-image-title-wrapper">
-            <h1 style="color: {{ data.title_color }}">
-                {{ data.title }}
-            </h1>
-            <h3 class="mt-5" style="color: {{ data.title_color }}">
-                {{ data.subtitle }}
-            </h3>
+{% if data.header_image_fit_height %}
+    {% if image.media_type == 'image' %}
+        <div class="header-image"
+             style="background-image: url('{{ image.image|media|resize(2000, false, { quality: '70' }) }}')"
+        ></div>
+    {% elseif image.media_type == 'video' %}
+        <div class="video-container">
+            <video width="100%" class="header-video" autoplay muted loop>
+                <source src="{{ image.image|media }}" type="video/mp4">
+            </video>
         </div>
+    {% endif %}
+
+    {% if data.title %}
+        <div class="header-image-title d-flex justify-content-center align-items-center {% if data.overlay %}overlay{% endif %}">
+            <div class="header-image-title-wrapper">
+                <h1 style="color: {{ data.title_color }}">
+                    {{ data.title }}
+                </h1>
+                <h3 class="mt-5" style="color: {{ data.title_color }}">
+                    {{ data.subtitle }}
+                </h3>
+            </div>
+        </div>
+    {% endif %}
+{% else %}
+    <div class="header-image-2-container">
+        {% if image.media_type == 'image' %}
+            <img src="{{ image.image|media|resize(2000, false, { quality: '70' }) }}"
+                 class="header-image-2"
+                 alt=""
+            />
+            {% if data.title %}
+                <div class="header-image-2-title-wrapper {% if data.overlay %}overlay{% endif %}">
+                    {% if data.overlay %}
+                        <div class="overlay"></div>
+                    {% endif %}
+                    <div class="header-image-2-title">
+                        <h1 style="color: {{ data.title_color }}">
+                            {{ data.title }}
+                        </h1>
+                        <h3 class="mt-5" style="color: {{ data.title_color }}">
+                            {{ data.subtitle }}
+                        </h3>
+                    </div>
+                </div>
+            {% endif %}
+        {% elseif image.media_type == 'video' %}
+            <video width="100%" class="header-image-2" autoplay muted loop>
+                <source src="{{ image.image|media }}" type="video/mp4">
+            </video>
+            {% if data.title %}
+                <div class="header-image-2-title-wrapper {% if data.overlay %}overlay{% endif %}">
+                    {% if data.overlay %}
+                        <div class="overlay"></div>
+                    {% endif %}
+                    <div class="header-image-2-title">
+                        <h1 style="color: {{ data.title_color }}">
+                            {{ data.title }}
+                        </h1>
+                        <h3 class="mt-5" style="color: {{ data.title_color }}">
+                            {{ data.subtitle }}
+                        </h3>
+                    </div>
+                </div>
+            {% endif %}
+        {% endif %}
     </div>
 {% endif %}
