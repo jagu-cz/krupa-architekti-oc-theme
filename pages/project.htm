@@ -62,9 +62,7 @@ function onInit() {
                                 </div>
                             {% elseif column.content_type == 'video' %}
                                 <a href="{{ column.content_video|media }}"
-                                   data-lightbox="lightbox"
                                    data-title="{{ project.title }}"
-                                   class="fancy-hover-cursor"
                                 >
                                     <video width="100%" autoplay muted loop>
                                         <source src="{{ column.content_video|media }}" type="video/mp4">
