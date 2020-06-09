@@ -36,8 +36,8 @@ function onInit() {
                     {% for column in row.columns %}
                         <div class="{{ column.width }} {{ column.right_margin }} {{ column.left_margin }} mb-3 d-flex">
                             {% if column.content_type == 'text' %}
-                                <div class="{% if project.full_width %}container{% endif %}">
-                                    <div class="project-text" {{ column.vertical_align }}>
+                                <div class="{% if project.full_width %}container{% endif %} {{ column.vertical_align }}">
+                                    <div class="project-text">
                                         {{ column.content_text|raw }}
                                     </div>
                                 </div>
