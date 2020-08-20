@@ -3,7 +3,6 @@ $footer-padding: 3em;
 $dark-navbar-toggler-icon: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHMAAABkCAMAAACCTv/3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRFAAAA5ubmSUUG+gAAAAJ0Uk5T/wDltzBKAAAAPklEQVR42uzYQQ0AAAgDseHfNC4IyVoD912WAACUm3uampqampqamq+aAAD+IVtTU1NTU1NT0z8EAFBsBRgAX+kR+Qam138AAAAASUVORK5CYII=);
 $light-navbar-toggler-icon: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHMAAABkCAMAAACCTv/3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF////5ubmueBsSwAAAAJ0Uk5T/wDltzBKAAAAPklEQVR42uzYQQ0AAAgDseHfNC4IyVoD912WAACUm3uampqampqamq+aAAD+IVtTU1NTU1NT0z8EAFBsBRgAX+kR+Qam138AAAAASUVORK5CYII=);
 
-@import url('https://fonts.googleapis.com/css?family=Cinzel:400,700&display=swap&subset=latin-ext'); // headings
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600&display=swap&subset=latin-ext'); // regular text
 
 // SCSS
@@ -13,18 +12,27 @@ html {
 }
 
 body {
-    font-weight: 200;
+    font-weight: 300;
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cinzel', serif;
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.1rem;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
     color: #808080;
-    font-weight: 200;
 }
 
 // layouts
@@ -429,7 +437,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: 1200px) {
     .container {
-        width: 90vw;
+        max-width: 90vw;
     }
 }
 
