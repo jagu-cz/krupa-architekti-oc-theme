@@ -1,7 +1,6 @@
 // variables
 $footer-padding: 3em;
-$dark-navbar-toggler-icon: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHMAAABkCAMAAACCTv/3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRFAAAA5ubmSUUG+gAAAAJ0Uk5T/wDltzBKAAAAPklEQVR42uzYQQ0AAAgDseHfNC4IyVoD912WAACUm3uampqampqamq+aAAD+IVtTU1NTU1NT0z8EAFBsBRgAX+kR+Qam138AAAAASUVORK5CYII=);
-$light-navbar-toggler-icon: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHMAAABkCAMAAACCTv/3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF////5ubmueBsSwAAAAJ0Uk5T/wDltzBKAAAAPklEQVR42uzYQQ0AAAgDseHfNC4IyVoD912WAACUm3uampqampqamq+aAAD+IVtTU1NTU1NT0z8EAFBsBRgAX+kR+Qam138AAAAASUVORK5CYII=);
+$navbar-toggler-icon: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pjxzdmcgdmlld0JveD0iMCAwIDMyIDMyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDpub25lO308L3N0eWxlPjwvZGVmcz48dGl0bGUvPjxnIGRhdGEtbmFtZT0iTGF5ZXIgMiIgaWQ9IkxheWVyXzIiPjxwYXRoIGQ9Ik0yOCwxMEg0QTEsMSwwLDAsMSw0LDhIMjhhMSwxLDAsMCwxLDAsMloiLz48cGF0aCBkPSJNMjgsMTdINGExLDEsMCwwLDEsMC0ySDI4YTEsMSwwLDAsMSwwLDJaIi8+PHBhdGggZD0iTTI4LDI0SDRhMSwxLDAsMCwxLDAtMkgyOGExLDEsMCwwLDEsMCwyWiIvPjwvZz48ZyBpZD0iZnJhbWUiPjxyZWN0IGNsYXNzPSJjbHMtMSIgaGVpZ2h0PSIzMiIgd2lkdGg9IjMyIi8+PC9nPjwvc3ZnPg==);
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600&display=swap&subset=latin-ext'); // regular text
 
@@ -28,7 +27,7 @@ h1 {
 }
 
 h5 {
-    font-size: 1.1rem;
+    font-size: 1.0rem;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -100,7 +99,7 @@ p, h1, h2, h3, h4, h5, h6 {
                     color: #808080;
 
                     .navbar-toggler-icon {
-                        background-image: $dark-navbar-toggler-icon;
+                        background-image: $navbar-toggler-icon;
                     }
                 }
             }
@@ -138,7 +137,7 @@ p, h1, h2, h3, h4, h5, h6 {
                         color: #808080;
 
                         .navbar-toggler-icon {
-                            background-image: $dark-navbar-toggler-icon;
+                            background-image: $navbar-toggler-icon;
                         }
                     }
                 }
@@ -149,7 +148,8 @@ p, h1, h2, h3, h4, h5, h6 {
                     color: #FFFFFF;
 
                     .navbar-toggler-icon {
-                        background-image: $light-navbar-toggler-icon;
+                        background-image: $navbar-toggler-icon;
+                        filter: invert(100%);
                     }
                 }
             }
@@ -178,7 +178,8 @@ p, h1, h2, h3, h4, h5, h6 {
                     color: #FFFFFF;
 
                     .navbar-toggler-icon {
-                        background-image: $light-navbar-toggler-icon;
+                        background-image: $navbar-toggler-icon;
+                        filter: invert(100%);
                     }
                 }
             }
@@ -216,7 +217,8 @@ p, h1, h2, h3, h4, h5, h6 {
                         color: #FFFFFF;
 
                         .navbar-toggler-icon {
-                            background-image: $light-navbar-toggler-icon;
+                            background-image: $navbar-toggler-icon;
+                            filter: invert(100%);
                         }
                     }
                 }
@@ -227,7 +229,7 @@ p, h1, h2, h3, h4, h5, h6 {
                     color: #808080;
 
                     .navbar-toggler-icon {
-                        background-image: $dark-navbar-toggler-icon;
+                        background-image: $navbar-toggler-icon;
                     }
                 }
             }
@@ -374,6 +376,8 @@ p, h1, h2, h3, h4, h5, h6 {
 .gallery {
     .gallery-item {
         margin: .5rem 0;
+        padding-left: 10px;
+        padding-right: 10px;
 
         h5 {
             margin-top: .5rem;
@@ -437,7 +441,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: 1200px) {
     .container {
-        max-width: 90vw;
+        max-width: 95vw;
     }
 }
 
