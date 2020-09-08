@@ -118,6 +118,14 @@ p, h1, h2, h3, h4, h5, h6 {
                     }
                 }
             }
+
+            .logo-dark {
+                display: none;
+            }
+
+            .logo-light {
+                display: block;
+            }
         }
     }
 
@@ -146,6 +154,14 @@ p, h1, h2, h3, h4, h5, h6 {
                         }
                     }
                 }
+
+                .logo-dark {
+                    display: none;
+                }
+
+                .logo-light {
+                    display: block;
+                }
             }
 
             .navbar-light {
@@ -167,6 +183,14 @@ p, h1, h2, h3, h4, h5, h6 {
                         background-color: #FFFFFF;
                     }
                 }
+            }
+
+            .logo-dark {
+                display: block;
+            }
+
+            .logo-light {
+                display: none;
             }
         }
     }
@@ -198,6 +222,14 @@ p, h1, h2, h3, h4, h5, h6 {
                     }
                 }
             }
+
+            .logo-dark {
+                display: block;
+            }
+
+            .logo-light {
+                display: none;
+            }
         }
     }
 
@@ -227,6 +259,14 @@ p, h1, h2, h3, h4, h5, h6 {
                         }
                     }
                 }
+
+                .logo-dark {
+                    display: block;
+                }
+
+                .logo-light {
+                    display: none;
+                }
             }
 
             .navbar-dark {
@@ -247,6 +287,14 @@ p, h1, h2, h3, h4, h5, h6 {
                         background-color: #808080;
                     }
                 }
+            }
+
+            .logo-dark {
+                display: none;
+            }
+
+            .logo-light {
+                display: block;
             }
         }
     }

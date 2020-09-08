@@ -10,16 +10,21 @@ tabs:
             type: section
         nav_logo:
             tab: Menu
-            label: Logo
+            label: Logo pro světlou variantu webu
             type: fileupload
             mode: image
             span: left
+        nav_logo_dark:
+            tab: Menu
+            label: Logo pro tmavou variantu webu
+            type: fileupload
+            mode: image
+            span: right
         nav_logo_height:
             tab: Menu
             label: Výška loga
             type: number
             default: 40
-            span: right
         ####################################################
         # Tab: Footer
         ####################################################

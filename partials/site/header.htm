@@ -1,10 +1,16 @@
 <header id="header">
     <nav class="container navbar navbar-expand-lg {{ navbarStyle }}">
         <a class="navbar-brand" href="/">
-            {% if this.theme.nav_logo %}
+            {% if this.theme.nav_logo and this.theme.nav_logo_dark %}
                 <img src="{{ this.theme.nav_logo.getPath() }}"
                      height="{{ this.theme.nav_logo_height }}"
                      alt="{{ this.theme.nav_logo.title }}"
+                     class="logo-light"
+                >
+                <img src="{{ this.theme.nav_logo_dark.getPath() }}"
+                     height="{{ this.theme.nav_logo_height }}"
+                     alt="{{ this.theme.nav_logo_dark.title }}"
+                     class="logo-dark"
                 >
             {% endif %}
         </a>
