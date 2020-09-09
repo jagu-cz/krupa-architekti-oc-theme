@@ -52,11 +52,15 @@ function onStart() {
         {/repeater}
         <!-- Render blocks -->
         {% for section in sections %}
-            {% partial 'blocks/' ~ section._group data=section %}
+            {% if loop.first and section._group != "headerimage" %}
+                <div style="padding-top: {{ this.theme.nav_logo_height }}px">
+                    {% partial 'blocks/' ~ section._group data=section %}
+                </div>
+            {% else %}
+                {% partial 'blocks/' ~ section._group data=section %}
+            {% endif %}
         {% endfor %}
-
         {% page %}
-
     </section>
 
     <!-- Footer -->
