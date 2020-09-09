@@ -65,31 +65,35 @@ p, h1, h2, h3, h4, h5, h6 {
             padding-top: 1rem;
             padding-bottom: 1rem;
 
-            .nav-link {
-                position: relative;
-                padding: 0 0 .3rem 0;
-                margin: 0 1rem;
-                transition: opacity 0.3s linear;
+            .navbar-nav {
+                margin-top: 1rem;
 
-                &:before {
-                    content: "";
-                    position: absolute;
-                    width: 100%;
-                    height: 1px;
-                    bottom: 0;
-                    left: 0;
-                    visibility: hidden;
-                    -webkit-transform: scaleX(0);
-                    transform: scaleX(0);
-                    -webkit-transition: all 0.3s ease-in-out 0s;
-                    transition: all 0.3s ease-in-out 0s;
-                }
+                .nav-link {
+                    position: relative;
+                    padding: 0 0 .3rem 0;
+                    margin: 0;
+                    transition: opacity 0.3s linear;
 
-                &:hover, &.active {
                     &:before {
-                        visibility: visible;
-                        -webkit-transform: scaleX(1);
-                        transform: scaleX(1);
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 1px;
+                        bottom: 0;
+                        left: 0;
+                        visibility: hidden;
+                        -webkit-transform: scaleX(0);
+                        transform: scaleX(0);
+                        -webkit-transition: all 0.3s ease-in-out 0s;
+                        transition: all 0.3s ease-in-out 0s;
+                    }
+
+                    &:hover, &.active {
+                        &:before {
+                            visibility: visible;
+                            -webkit-transform: scaleX(1);
+                            transform: scaleX(1);
+                        }
                     }
                 }
             }
