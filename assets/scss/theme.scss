@@ -329,7 +329,6 @@ p, h1, h2, h3, h4, h5, h6 {
     }
 }
 
-
 // blocks
 .header-image-2-container {
     position: relative;
@@ -427,6 +426,36 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .gallery {
+    .tag-button-list {
+        margin-bottom: 1rem;
+
+        .tag-button {
+            color: #808080;
+            background: #FFFFFF;
+            border-radius: 100px;
+            border: 1px solid #808080;
+            margin-right: .5rem;
+            padding: .5rem 1rem;
+
+            &:hover {
+                background: #EEEEEE;
+            }
+
+            &:focus {
+                outline: none !important;
+            }
+
+            &.active {
+                color: #FFFFFF;
+                background: #808080;
+
+                &:hover {
+                    background: #666666;
+                }
+            }
+        }
+    }
+
     .gallery-item {
         margin: .5rem 0;
         padding-left: 10px;
@@ -442,6 +471,10 @@ p, h1, h2, h3, h4, h5, h6 {
             background-repeat: no-repeat;
             width: 100%;
             padding-bottom: 80%; // 5:4 aspect ratio
+        }
+
+        &.hidden {
+            display: none;
         }
     }
 }
