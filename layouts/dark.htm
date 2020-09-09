@@ -35,7 +35,7 @@ recaptcha_size = "normal"
 
 <body>
 
-<div class="color-scheme-{{ this.theme.general_color_scheme }}">
+<div class="app-wrapper color-scheme-{{ this.theme.general_color_scheme }}">
 
     <!-- Header -->
     <header id="layout-header" class="dark">
@@ -43,7 +43,7 @@ recaptcha_size = "normal"
     </header>
 
     <!-- Content -->
-    <section id="layout-content">
+    <section id="layout-content" class="content-wrapper">
         <!-- Repeater -->
         {repeater name="sections" groups="~/themes/jagu-krupa-architekti-jagu-oc-theme/meta/blocks.yaml" tab="Blocks"}
         {variable name="_dummy" type="text"}{/variable}

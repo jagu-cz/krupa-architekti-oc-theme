@@ -6,7 +6,7 @@ window.onscroll = () => {
     if (currentScrollPos < 50 || prevScrollPos > currentScrollPos) {
         document.getElementById("header").style.top = "0";
     } else {
-        document.getElementById("header").style.top = "-120px";
+        document.getElementById("header").style.top = "-150px";
     }
     // show/hide background
     if (currentScrollPos < 100) {
