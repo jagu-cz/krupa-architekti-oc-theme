@@ -21,36 +21,6 @@ headerimage:
                 action: show
                 condition: unchecked
                 field: random_content
-        overlay:
-            label: Overlay
-            type: switch
-            trigger:
-                action: show
-                condition: unchecked
-                field: random_content
-        title:
-            label: Title
-            type: text
-            span: left
-            trigger:
-                action: show
-                condition: unchecked
-                field: random_content
-        subtitle:
-            label: Subtitle
-            type: text
-            span: right
-            trigger:
-                action: show
-                condition: unchecked
-                field: random_content
-        title_color:
-            label: Title color
-            type: colorpicker
-            trigger:
-                action: show
-                condition: unchecked
-                field: random_content
         images:
             label: Images/videos
             type: repeater
@@ -72,6 +42,23 @@ headerimage:
                         label: Image
                         type: mediafinder
                         mode: file
+        text_and_overlay_section:
+            label: Text and overlay
+            type: section
+        overlay:
+            label: Overlay
+            type: switch
+        title:
+            label: Title
+            type: text
+            span: left
+        subtitle:
+            label: Subtitle
+            type: text
+            span: right
+        title_color:
+            label: Title color
+            type: colorpicker
 
 pagetitle:
     name: Page title
